@@ -6,10 +6,10 @@ import * as SecureStore from 'expo-secure-store';
 import BackSvg from "../../assets/Svgs/BackSvg"
 //@ts-ignore
 import TickSvg from "../../assets/Svgs/TickSvg.svg"
-const Mpin = () => {
+const Mpin = ({navigation}) => {
   const arr = [["1", "2", "3"], ["4", "5", "6"], ["7","8","9"], ["0","<-","->"]];
   const [mpin,setMpin]=useState('');
-  const [isSetMpin,setSetMpin]=useState(true);
+  const [isSetMpin,setSetMpin]=useState(false);
   
   async function storeMpin() {
    
@@ -40,7 +40,7 @@ const onButtonPress = async (press: string) => {
         const storedMpin = await SecureStore.getItemAsync("mpin");
         if (storedMpin === mpin) {
           await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Heavy);
-          alert("MPIN is correct");
+          navigation.navigate('LoginSignup')
         } else {
           await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
           alert("MPIN is incorrect");
