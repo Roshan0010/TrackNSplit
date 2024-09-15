@@ -82,18 +82,18 @@ const Mpin = ({ navigation }) => {
   }
 
   return (
-    <SafeAreaView className="flex-1 justify-center items-center bg-[#25262C]">
-      <View className="rounded-3xl bg-[#25262C] p-5 flex-1 justify-center items-center gap-10">
+    <SafeAreaView className="flex-1 justify-center items-center bg-primaryDarkBg">
+      <View className="rounded-3xl bg-primaryDarkBg p-5 flex-1 justify-center items-center gap-10">
         
         {/* Title Section */}
         {isSetMpin ? (
-          <Text className="text-white text-3xl">Set MPIN</Text>
+          <Text className="text-fadedWhite text-3xl">Set MPIN</Text>
         ) : (
-          <Text className="text-white text-3xl">Enter MPIN</Text>
+          <Text className="text-fadedWhite text-3xl">Enter MPIN</Text>
         )}
        
         {/* MPIN Input Section */}
-        <View className="bg-[#35363D] h-20 w-[200px] rounded-xl flex justify-center items-center relative">
+        <View className="bg-secondaryDarkBg h-20 w-[200px] rounded-xl flex justify-center items-center relative">
           {viewPassword ? (
             <Text className="text-white text-5xl tracking-widest">{mpin}</Text>
           ) : (
@@ -144,9 +144,9 @@ const Mpin = ({ navigation }) => {
                 <TouchableOpacity
                   onPress={() => onButtonPress(item)}
                   key={item}
-                  className="bg-[#B1ED81] h-16 w-[30%] flex justify-center items-center rounded-xl"
+                  className="bg-primaryGreen h-16 w-[30%] flex justify-center items-center rounded-xl"
                 >
-                  <Text className="text-3xl text-[#35373C]">{item}</Text>
+                  <Text className="text-3xl text-customBlack">{item}</Text>
                 </TouchableOpacity>
               );
             })}

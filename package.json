@@ -14,15 +14,18 @@
     "@types/react": "~18.2.79",
     "expo": "~51.0.28",
     "expo-haptics": "~13.0.1",
+    "expo-secure-store": "~13.0.2",
     "expo-status-bar": "~1.12.1",
+    "formik": "^2.4.6",
     "nativewind": "^2.0.11",
     "react": "18.2.0",
     "react-native": "0.74.5",
+    "react-native-check-box": "^2.1.7",
     "react-native-gesture-handler": "~2.16.1",
     "react-native-mmkv": "^3.0.2",
     "react-native-svg": "^15.6.0",
     "typescript": "~5.3.3",
-    "expo-secure-store": "~13.0.2"
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
