@@ -1,0 +1,32 @@
+
+  export  const  data = [
+    { id: '1', title: 'Weekly Groceries', amount: 500, type: 'spend' },
+    { id: '2', title: 'Salary', amount: 15000, type: 'income' },
+    { id: '3', title: 'Electricity Bill', amount: 1200, type: 'spend' },
+    { id: '4', title: 'Freelance Income', amount: 7000, type: 'income' },
+    { id: '5', title: 'Gym Membership', amount: 1200, type: 'spend' },
+    { id: '6', title: 'Internet Bill', amount: 999, type: 'spend' },
+    { id: '7', title: 'Stock Dividend', amount: 2000, type: 'income' },
+    { id: '8', title: 'Restaurant', amount: 800, type: 'spend' },
+    { id: '9', title: 'Bonus', amount: 10000, type: 'income' },
+    { id: '10', title: 'Clothing', amount: 3000, type: 'spend' },
+    { id: '11', title: 'Rent', amount: 8000, type: 'spend' },
+    { id: '12', title: 'Interest Income', amount: 500, type: 'income' },
+    { id: '13', title: 'Car Payment', amount: 2000, type: 'spend' },
+    { id: '14', title: 'Gift', amount: 1500, type: 'income' },
+    { id: '15', title: 'Vacation', amount: 6000, type: 'spend' },
+  ];
+export const months = [
+    { label: 'January', value: 'january' },
+    { label: 'February', value: 'february' },
+    { label: 'March', value: 'march' },
+    { label: 'April', value: 'april' },
+    { label: 'May', value: 'may' },
+    { label: 'June', value: 'june' },
+    { label: 'July', value: 'july' },
+    { label: 'August', value: 'august' },
+    { label: 'September', value: 'september' },
+    { label: 'October', value: 'october' },
+    { label: 'November', value: 'november' },
+    { label: 'December', value: 'december' },
+  ];

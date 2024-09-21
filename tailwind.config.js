@@ -11,6 +11,7 @@ module.exports = {
         fadedWhite: '#FEFFFE',    // Custom primary color
         primaryGreen: '#B1ED81',  // Custom secondary color
         secondaryGreen:"#3e7611",
+        secondaryText:"#C4C5C4",
         // Add more custom colors here
         primaryDarkBg: '#25262C', // Example custom color
         secondaryDarkBg: '#35363D', // Example custom color

@@ -31,6 +31,7 @@ const LoginSignup = () => {
             <View className="flex-1 justify-center items-center px-4">
               
               <AuthForm isLogin={isLogin} setLogin={setLogin} />
+            
             </View>
           </View>
           
