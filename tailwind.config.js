@@ -15,6 +15,7 @@ module.exports = {
         // Add more custom colors here
         primaryDarkBg: '#25262C', // Example custom color
         secondaryDarkBg: '#35363D', // Example custom color
+        tertiaryDarkBg: '#414753',
         customBlack:"#35373C"
       },
     },

@@ -1,41 +1,37 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, FlatList } from 'react-native';
+import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
 
-const CustomDropDown = ({ items, width = 120, height = 30, fontSize = 12 }) => {
+const CustomDropDown = ({ items, width = 120, height = 30, fontSize = 12, dropdownHeight = 200, onSelect,title }) => {
   const [open, setOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
 
-  const toggleDropdown = () => {
-    setOpen(!open);
-  };
+  const toggleDropdown = () => setOpen(!open);
 
   const selectItem = (item) => {
     setSelectedItem(item);
+    // onSelect(item); // Call the onSelect function passed as a prop
     setOpen(false);
   };
 
   return (
-    <View className={`relative ${open ? 'z-50' : 'z-10'}`} style={{ width }}>
-      {/* Display the selected item or placeholder */}
+    <View className="relative z-50" style={{ width }}>
       <TouchableOpacity
         className="bg-secondaryDarkBg rounded-md p-2 flex-row justify-between items-center"
         onPress={toggleDropdown}
         style={{ height }}
       >
         <Text className="text-white" style={{ fontSize }}>
-          {selectedItem ? selectedItem.label : 'Select Month'}
+          {selectedItem ? selectedItem.label : title}
         </Text>
         <Text className="text-white">{open ? '▲' : '▼'}</Text>
       </TouchableOpacity>
 
-      {/* Dropdown list */}
       {open && (
-        <View className="absolute top-full mt-1 bg-secondaryDarkBg rounded-md shadow-lg "style={{ width }}>
-          <FlatList
-            data={items}
-            keyExtractor={(item) => item.value}
-            renderItem={({ item }) => (
+        <View className="absolute top-full mt-1 bg-secondaryDarkBg rounded-md shadow-lg" style={{ width }}>
+          <ScrollView style={{ maxHeight: dropdownHeight }}>
+            {items.map((item) => (
               <TouchableOpacity
+                key={item.value}
                 className="p-2"
                 onPress={() => selectItem(item)}
               >
@@ -43,9 +39,8 @@ const CustomDropDown = ({ items, width = 120, height = 30, fontSize = 12 }) => {
                   {item.label}
                 </Text>
               </TouchableOpacity>
-            )}
-            style={{ maxHeight: 200 }} // Limit dropdown height
-          />
+            ))}
+          </ScrollView>
         </View>
       )}
     </View>
